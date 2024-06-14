@@ -46,12 +46,12 @@ git clone https://github.com/AhmedHoussamBouzine/odoo-17-docker-compose.git
 
 ### Build the Containers
 
-Build and start the services defined in the `docker-compose.yml` file:
+Build the services defined in the `docker-compose.yml` file:
 
 ```bash
 docker compose up -d
 ```
-This will pull the required images, build the Odoo image from the Dockerfile.
+This will pull the required images and build the Odoo image from the Dockerfile.
 
 ### Start the Containers
 
