@@ -75,7 +75,7 @@ After logging in with your credentials, you will be redirected to the Odoo home 
 </p>
 
 ## Volumes
-The docker-compose.yml file defines two volumes for persistent storage:
+The `docker-compose.yml` file defines two volumes for persistent storage:
 
 - `odoo17-web-data`: Stores Odoo's data.
 - `odoo17-db-data`: Stores PostgreSQL data.
