@@ -8,10 +8,10 @@ This repository contains the configuration to set up an Odoo 17 instance with Po
 - Docker Compose installed on your machine.
 
 ### Project Structure
-
+`
 .
 ├── Dockerfile
 ├── docker-compose.yml
 ├── customs/
 └── odoo.conf
-
+`
