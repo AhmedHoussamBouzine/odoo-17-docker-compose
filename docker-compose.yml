@@ -1,0 +1,33 @@
+version: "2"
+
+services:
+  db:
+    image: postgres:16
+    ports:
+      - "5432:5432" 
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo17
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - odoo17-db-data:/var/lib/postgresql/data
+
+  odoo_web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8069:8069"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=odoo17
+      - DB_PASSWORD=odoo
+    volumes:
+      - ./customs:/customs
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - odoo17-web-data:/var/lib/odoo
+
+volumes:
+  odoo17-web-data:
+  odoo17-db-data:
