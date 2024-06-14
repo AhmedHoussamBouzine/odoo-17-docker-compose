@@ -61,3 +61,33 @@ docker compose up
 ### Access Odoo
 
 Open your web browser and go to `http://localhost:8069`. You should see the Odoo setup page.
+
+<p align="center">
+  <img src="./assets/setup-page.png" alt="setup-page" width="500"/>
+</p>
+
+### Login and Home Page
+
+After logging in with your credentials, you will be redirected to the Odoo home page, where you can start configuring and using your Odoo instance.
+
+<p align="center">
+  <img src="./assets/home.png" alt="home-page" width="500"/>
+</p>
+
+## Volumes
+The docker-compose.yml file defines two volumes for persistent storage:
+
+- `odoo17-web-data`: Stores Odoo's data.
+- `odoo17-db-data`: Stores PostgreSQL data.
+
+These volumes ensure that data is not lost when the containers are stopped or removed.
+
+## Custom Modules
+
+Place your custom modules in the `customs/` directory, and ensure that all custom modules have their version fields correctly formatted according to `Odoo 17` requirements.
+
+## Troubleshooting
+
+- If you encounter authentication errors, ensure that the PostgreSQL user and database are correctly set up.
+- Verify that the environment variables in the `docker-compose.yml` file match the credentials used in the `odoo.conf` file and PostgreSQL setup.
+- Check custom module manifest files for correct version format.
