@@ -91,3 +91,8 @@ Place your custom modules in the `customs/` directory, and ensure that all custo
 - If you encounter authentication errors, ensure that the PostgreSQL user and database are correctly set up.
 - Verify that the environment variables in the `docker-compose.yml` file match the credentials used in the `odoo.conf` file and PostgreSQL setup.
 - Check custom module manifest files for correct version format.
+
+## Contributing
+
+Contributions are welcome! Fork this repository and submit pull requests for any improvements or bug fixes.
+
